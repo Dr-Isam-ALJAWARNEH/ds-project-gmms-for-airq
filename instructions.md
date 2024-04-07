@@ -43,7 +43,7 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
     - Mixture Density Networks (MDNs): MDNs are neural networks that model the conditional probability distribution of the output variable given the input data as a mixture of Gaussian distributions. Similar to GMMs, MDNs can capture complex multi-modal distributions in the data and generate new data points by sampling from the learned mixture distribution.
     - Copula-based Models: Copulas are statistical tools that describe the dependence structure between random variables separately from their marginal distributions. Copula-based models can be used to generate new data by sampling from the copula function while specifying the marginal distributions of the variables.
 # dbscan algorithm
-[dbscan](dbscan-algorithm)
+[dbscan](#dbscan-algorithm)
 # [ ] `you need to complete this part' - DBSCAN
 
         1. [ ] run the example clustering code (DBSCAN), attached in the new folder "DBSCAN_Clustering" inside 'starting_code' folder
