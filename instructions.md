@@ -34,7 +34,7 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
 - numbers to capture
     - parameters : generated `data size`  in the x-axis , accuracy [RMSE](https://www.statisticshowto.com/probability-and-statistics/regression-analysis/rmse-root-mean-square-error/) and Mean Absoulte Percentage Error [MAPE](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error) for geo-statistics.  [RMSE equation](https://en.wikipedia.org/wiki/Root-mean-square_deviation). Same applies to `Top-N` queries.
 --------------------------------------------
-<!-- Task 1 -->
+
 # [ ] Task 1
 ## `Partially Completed!` --> check the algorithms and the models!
 - [X] Have a look at the Example: GMM for Generating New Data [Gaussian Mixture Models](https://jakevdp.github.io/PythonDataScienceHandbook/05.12-gaussian-mixtures.html). AND
@@ -48,7 +48,7 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
     - Copula-based Models: Copulas are statistical tools that describe the dependence structure between random variables separately from their marginal distributions. Copula-based models can be used to generate new data by sampling from the copula function while specifying the marginal distributions of the variables.
 # dbscan algorithm
 
-# [ ] `you need to complete this part' - DBSCAN
+- [ ] `you need to complete this part' - DBSCAN
 
         1. [ ] run the example clustering code (DBSCAN), attached in the new folder "DBSCAN_Clustering" inside 'starting_code' folder
         2. [ ] read more about how DBSCAN works in scikit-learn
