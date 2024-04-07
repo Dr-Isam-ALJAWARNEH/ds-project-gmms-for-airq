@@ -2,7 +2,7 @@
 ## some insights:
 ---------------------------------------
 <!-- Task 2 -->
-# [ ] Task 2! 
+# [ ] Task 2
 # `Update: April 7, 2024`
 ### `N.B.` references are available in the end of this instruction file!
 # `Required OPTIMIZATION ==> IMPORTANT!`
@@ -21,12 +21,13 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
     
 -------------------------------------------------
 <!-- Task 3 -->
-# [ ] Task 3! 
+# [ ] Task 3
   # `TODO:` next 
 - [ ] You need to test generated new `samples` data using a `density-based clustering` workload. Specifically the following:
     - you first need to complete the tutorial described in [dbscan](#dbscan-algorithm) in [task1](#--task-1), then you need to do the following task as described in sub-section [novel adapted DBSCAN](#dbscan-workload)
 
 ------------------------------------------------
+
 # dbscan workload
 - you need to `adapt` the stock version of the DBSCAN so that it operates a bit differently, specifically you need to do the following:
     - plain scikit-learn DBSCAN distance calculation relies on using  ```haversine``` as a distance metric to calculate haversine distances (i.e., geometrical distances) between coordinates (longitudes/latitudes pairs)
@@ -39,14 +40,48 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
 
   > **N.B.** we are able to do this because of the definition of ```metric``` in DBSCAN which says **metric: The metric to use when calculating distance between instances in** a ```feature array``` so, it  a distance between several features is possible, given a ```feature array```, so put your scaled features in a feature array.
 -------------------------------------------------
-<!-- Task 3 -->
-# [ ] Task 3! 
+<!-- Task 4 -->
+# [ ] Task 4
   # `TODO:` next
 - apply everything you have done (and you need to do in `task2`) to a second dataset, probably `NYC taxi mobility data`, that is [available online](https://github.com/IsamAljawarneh/datasets/tree/master/data), `nyc1.zip`. the target variable is `trip_distance`. You need to capture `accuracy` and `running time` as described previously.
 
 - numbers to capture
     - parameters : generated `data size`  in the x-axis , accuracy [RMSE](https://www.statisticshowto.com/probability-and-statistics/regression-analysis/rmse-root-mean-square-error/) and Mean Absoulte Percentage Error [MAPE](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error) for geo-statistics.  [RMSE equation](https://en.wikipedia.org/wiki/Root-mean-square_deviation). Same applies to `Top-N` queries.
 --------------------------------------------
+<!-- Task 5 -->
+# [ ] Task 5
+
+# `IMPortant` test with more than one data, add NYC taxi mobility data (for journal paper, you need tests on more than one data):
+[available online](https://github.com/IsamAljawarneh/datasets/tree/master/data), `nyc1.zip`
+- start writing your paper, either for conferences or journal. For journal, use the `applied sciences` template atatched in the `target-venue` folder titled `applsci-template.dot` or ```IEEE``` template attached, or other journal template that i can attach later on. (minimum 10 pages)
+- or even, consider one of the following two conference (IEEE template for those conferences is attached) (minimum 6 pages)
+    - [MCNA - Spain](https://mcna-conference.org/2024/committee.php)
+    - [IDSTA - Croatia](https://idsta-conference.org/2024/calls.php)
+1.  [ ] Include (cite appropriately) all of the following papers! reference papers include:
+    # Category A : for sampling desing and Approximate Query Processing (AQP)
+    > Spatial-aware approximate big data stream processing [^2] and
+    > Polygon Simplification for the Efficient Approximate Analytics of Georeferenced Big Data [^3]
+    > QoS-aware approximate query processing for smart cities spatial data streams. [^4]
+    > Spatially representative online Big Data sampling for smart cities. [^5]
+    # Category B: for spatial join procesing
+    > SpatialSSJP: QoS-Aware Adaptive Approximate Stream-Static Spatial Join Processor [^6]
+    > Efficient Integration of Heterogeneous Mobility-Pollution Big Data for Joint Analytics at Scale with QoS Guarantees [^7]
+    > Efficiently integrating mobility and environment data for climate change analytics.[^8]
+    > Efficient QoS-aware spatial join processing for scalable NoSQL storage frameworks. [^9]
+    # Category C: clustering DBSCAN
+    > Efficient spark-based framework for big geospatial data query processing and analysis [^10]
+ 
+    [^1]: Al Jawarneh, I. M., Foschini, L., & Corradi, A. (2023, November). Efficient Generation of Approximate Region-based Geo-maps from Big Geotagged Data. In 2023 IEEE 28th International Workshop on Computer Aided Modeling and Design of Communication Links and Networks (CAMAD) (pp. 93-98). IEEE.
+    [^2]: Al Jawarneh, I. M., Bellavista, P., Foschini, L., & Montanari, R. (2019, December). Spatial-aware approximate big data stream processing. In 2019 IEEE global communications conference (GLOBECOM) (pp. 1-6). IEEE. [available online](https://www.researchgate.net/profile/Isam-Al-Jawarneh/publication/339562314_Spatial-Aware_Approximate_Big_Data_Stream_Processing/links/5ff45764299bf14088708888/Spatial-Aware-Approximate-Big-Data-Stream-Processing.pdf)
+    [^3]: Al Jawarneh, I. M., Foschini, L., & Bellavista, P. (2023). Polygon Simplification for the Efficient Approximate Analytics of Georeferenced Big Data. Sensors, 23(19), 8178.[available online](https://www.mdpi.com/1424-8220/23/19/8178)
+    [^4]: Al Jawarneh, I. M., Bellavista, P., Corradi, A., Foschini, L., & Montanari, R. (2021). QoS-aware approximate query processing for smart cities spatial data streams. Sensors, 21(12), 4160. [available online](https://www.mdpi.com/1424-8220/21/12/4160)
+    [^5]: Al Jawarneh, I. M., Bellavista, P., Corradi, A., Foschini, L., & Montanari, R. (2020, September). Spatially representative online Big Data sampling for smart cities. In 2020 IEEE 25th International Workshop on Computer Aided Modeling and Design of Communication Links and Networks (CAMAD) (pp. 1-6). IEEE.[presentation available online](https://isamaljawarneh.github.io/talks/CAMAD20.pdf)
+    [^6]: Al Jawarneh, I. M., Bellavista, P., Corradi, A., Foschini, L., & Montanari, R. (2023). SpatialSSJP: QoS-Aware Adaptive Approximate Stream-Static Spatial Join Processor. IEEE Transactions on Parallel and Distributed Systems. [available online](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10309986)
+    [^7]: Al Jawarneh, I. M., Foschini, L., & Bellavista, P. (2023). Efficient Integration of Heterogeneous Mobility-Pollution Big Data for Joint Analytics at Scale with QoS Guarantees. Future Internet, 15(8), 263. [available online](https://www.mdpi.com/1999-5903/15/8/263)
+    [^8]:Al Jawarneh, I. M., Bellavista, P., Corradi, A., Foschini, L., & Montanari, R. (2021, October). Efficiently integrating mobility and environment data for climate change analytics. In 2021 IEEE 26th International Workshop on Computer Aided Modeling and Design of Communication Links and Networks (CAMAD) (pp. 1-5). IEEE.[presentation available online](https://isamaljawarneh.github.io/talks/CAMAD21.pdf)
+    [^9]:Al Jawarneh, I. M., Bellavista, P., Corradi, A., Foschini, L., & Montanari, R. (2020). Efficient QoS-aware spatial join processing for scalable NoSQL storage frameworks. IEEE Transactions on Network and Service Management, 18(2), 2437-2449.[available online](https://isamaljawarneh.github.io/pubs/TNSM3034150.pdf)
+    [^10]: Aljawarneh, I. M., Bellavista, P., Corradi, A., Montanari, R., Foschini, L., & Zanotti, A. (2017, July). Efficient spark-based framework for big geospatial data query processing and analysis. In 2017 IEEE symposium on computers and communications (ISCC) (pp. 851-856). IEEE. [available online](https://www.academia.edu/download/55478212/08024633.pdf)
+-------------------------
 
 # [ ] Task 1
 ## `Partially Completed!` --> check the algorithms and the models!
@@ -59,8 +94,8 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
     - Variational Autoencoders (VAEs): VAEs are another type of generative model that learn a low-dimensional representation of the input data and generate new data points by sampling from this learned representation. VAEs consist of an encoder network that maps input data to a latent space and a decoder network that reconstructs the input data from the latent space. By sampling from the latent space, new data points can be generated.
     - Mixture Density Networks (MDNs): MDNs are neural networks that model the conditional probability distribution of the output variable given the input data as a mixture of Gaussian distributions. Similar to GMMs, MDNs can capture complex multi-modal distributions in the data and generate new data points by sampling from the learned mixture distribution.
     - Copula-based Models: Copulas are statistical tools that describe the dependence structure between random variables separately from their marginal distributions. Copula-based models can be used to generate new data by sampling from the copula function while specifying the marginal distributions of the variables.
-# dbscan algorithm
 
+# dbscan algorithm
 - [ ] `you need to complete this part' - DBSCAN
 
         1. [ ] run the example clustering code (DBSCAN), attached in the new folder "DBSCAN_Clustering" inside 'starting_code' folder
