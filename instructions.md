@@ -1,10 +1,11 @@
 # instructions
+# `Required OPTIMIZATIONs ==> IMPORTANT!`
 ---------------------------------------
 <!-- Task 2 -->
 # [ ] Task 2
 # `Update: April 7, 2024`
 ### `N.B.` references are available in the end of this instruction file!
-# `Required OPTIMIZATION ==> IMPORTANT!`
+
 ## `TODO:` 
 - [ ] Using the algorithms that you have developed, (being it GMM, KDE, MDN), 
 generate sufficient amount of new `data samples`. The size of the `generated` data should be the same as the size of the `original` data that has been used for training for generating the data. You should generate sufficient amount of `new samples` to be able to perform subsequent tests. For example, generate 100K (one hundred thousands) new samples. Thereafter, you need to test the accuracy and the quality of the generated data based on several query workloads as follows (**N.B.** first, for the NYC Air Quality (AQ) data, the target variable is `pm25`)
