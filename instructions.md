@@ -1,5 +1,4 @@
 # instructions
-## some insights:
 ---------------------------------------
 <!-- Task 2 -->
 # [ ] Task 2
