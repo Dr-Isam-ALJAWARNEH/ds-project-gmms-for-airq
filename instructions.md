@@ -20,6 +20,11 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
 - [ ] You need then to capture the time-based QoS requirements (e.g., `running time` of each algorithm). You normally need to capture `end-to-end` `running time` for all stages of the processing pipeline, from `data cleaning` to `transformation`, to `generation` to `spatial join`, all the way down to `query processing`. Draw x-y graphs, where x is the new `sample size` and y is the `running time`
     
 -------------------------------------------------
+<!-- Task 3 -->
+# [ ] Task 3! 
+  # `TODO:` next 
+- [ ] You need to test generated new `samples` data using a `density-based clustering` workload. Specifically the following:
+    - you first need to complete the tutorial described in [dbscan](#dbscan-algorithm) in [task1](#task-1)
 -------------------------------------------------
 <!-- Task 3 -->
 # [ ] Task 3! 
@@ -28,11 +33,10 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
 
 - numbers to capture
     - parameters : generated `data size`  in the x-axis , accuracy [RMSE](https://www.statisticshowto.com/probability-and-statistics/regression-analysis/rmse-root-mean-square-error/) and Mean Absoulte Percentage Error [MAPE](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error) for geo-statistics.  [RMSE equation](https://en.wikipedia.org/wiki/Root-mean-square_deviation). Same applies to `Top-N` queries.
-
-
 --------------------------------------------
 <!-- Task 1 -->
-# [ ] Task 1! `Partially Completed!` --> check the algorithms and the models!
+# [ ] Task 1
+## `Partially Completed!` --> check the algorithms and the models!
 - [X] Have a look at the Example: GMM for Generating New Data [Gaussian Mixture Models](https://jakevdp.github.io/PythonDataScienceHandbook/05.12-gaussian-mixtures.html). AND
 - [X] Kernel Density Estimation [KDE](https://jakevdp.github.io/PythonDataScienceHandbook/05.13-kernel-density-estimation.html)
 - [X] the data file contains granular (meter-meter level) low-cost air quality data, measuring most importantly Particulate Matters (PM10 and PM2.5), in addition to some other features including location represented as longitudes/latitudes!
@@ -43,7 +47,7 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
     - Mixture Density Networks (MDNs): MDNs are neural networks that model the conditional probability distribution of the output variable given the input data as a mixture of Gaussian distributions. Similar to GMMs, MDNs can capture complex multi-modal distributions in the data and generate new data points by sampling from the learned mixture distribution.
     - Copula-based Models: Copulas are statistical tools that describe the dependence structure between random variables separately from their marginal distributions. Copula-based models can be used to generate new data by sampling from the copula function while specifying the marginal distributions of the variables.
 # dbscan algorithm
-[dbscan](#dbscan-algorithm)
+
 # [ ] `you need to complete this part' - DBSCAN
 
         1. [ ] run the example clustering code (DBSCAN), attached in the new folder "DBSCAN_Clustering" inside 'starting_code' folder
