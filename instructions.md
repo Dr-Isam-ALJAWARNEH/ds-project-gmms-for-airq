@@ -24,7 +24,20 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
 # [ ] Task 3! 
   # `TODO:` next 
 - [ ] You need to test generated new `samples` data using a `density-based clustering` workload. Specifically the following:
-    - you first need to complete the tutorial described in [dbscan](#dbscan-algorithm) in [task1](#--task-1)
+    - you first need to complete the tutorial described in [dbscan](#dbscan-algorithm) in [task1](#--task-1), then you need to do the following task as described in sub-section [novel adapted DBSCAN](#dbscan-workload)
+
+------------------------------------------------
+# dbscan workload
+- you need to `adapt` the stock version of the DBSCAN so that it operates a bit differently, specifically you need to do the following:
+    - plain scikit-learn DBSCAN distance calculation relies on using  ```haversine``` as a distance metric to calculate haversine distances (i.e., geometrical distances) between coordinates (longitudes/latitudes pairs)
+  > the attention that should be given in this case is that you did not capture any statistics regarding the distribution of the pm25 values (our target variable), you could for example capture the histograms of those values.
+  Read more about possible values of ```pm2.5``` in this reference [PM2.5 particles in the air](https://www.epa.vic.gov.au/for-community/environmental-information/air-quality/pm25-particles-in-the-air). This means that you need to create a histogram showing the density of each bracket, your binning strategy should rely on the community definition of ranges of values. For example, binning example is the follwoing: Less than 25, 25–50, 50–100, 100–300, More than 300. 
+    - Also, draw histograms showing the same binning and density of pm2.5 values in each neighborhood in your data. By the way, how many neighborhoods you have in your data?!
+  > this is important as it will inform us about the fact whether nearby locations are having similar pm25 values. Why do we need to do this, because it is only in that case we consider those as a cluster, since they are geographiclly nearby, and also having simialr feature values (pm25 in this case). So what you need to do next is the following:
+  - .. ```Extract and normalize several features```, similar to what has been done in the following tutorial, read specifically [Extending DBSCAN beyond just spatial coordinates](https://musa-550-fall-2020.github.io/slides/lecture-11A.html), thereafter ```Run DBSCAN to extract high-density clusters``` passing as an argument to the DBSCAN the new ```scaled features```, probably something like ```cores, labels = dbscan(features, eps=eps, min_samples=min_samples)``` . notice passing features (including pm25, longitude, latitude) instead of simply the coordinates.
+  - having done this novel distance calculation (based on geometrical distance and pm25 values distance), calculate again the ```silhouette_score```, and check wether you obtain a higher accuracy (higher silhouette_score values) or not!
+
+  > **N.B.** we are able to do this because of the definition of ```metric``` in DBSCAN which says **metric: The metric to use when calculating distance between instances in** a ```feature array``` so, it  a distance between several features is possible, given a ```feature array```, so put your scaled features in a feature array.
 -------------------------------------------------
 <!-- Task 3 -->
 # [ ] Task 3! 
@@ -34,8 +47,8 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
 - numbers to capture
     - parameters : generated `data size`  in the x-axis , accuracy [RMSE](https://www.statisticshowto.com/probability-and-statistics/regression-analysis/rmse-root-mean-square-error/) and Mean Absoulte Percentage Error [MAPE](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error) for geo-statistics.  [RMSE equation](https://en.wikipedia.org/wiki/Root-mean-square_deviation). Same applies to `Top-N` queries.
 --------------------------------------------
-- [ ] 
-# Task 1
+
+# [ ] Task 1
 ## `Partially Completed!` --> check the algorithms and the models!
 - [X] Have a look at the Example: GMM for Generating New Data [Gaussian Mixture Models](https://jakevdp.github.io/PythonDataScienceHandbook/05.12-gaussian-mixtures.html). AND
 - [X] Kernel Density Estimation [KDE](https://jakevdp.github.io/PythonDataScienceHandbook/05.13-kernel-density-estimation.html)
