@@ -24,7 +24,7 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
 # [ ] Task 3! 
   # `TODO:` next 
 - [ ] You need to test generated new `samples` data using a `density-based clustering` workload. Specifically the following:
-    - you first need to complete the tutorial described in [dbscan](#dbscan-algorithm) in [task1](#task-1)
+    - you first need to complete the tutorial described in [dbscan](#dbscan-algorithm) in [task1](#--task-1)
 -------------------------------------------------
 <!-- Task 3 -->
 # [ ] Task 3! 
