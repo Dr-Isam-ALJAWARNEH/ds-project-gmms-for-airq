@@ -15,9 +15,20 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
         - those queries can be tested using Pearson, [jensen shannon divergence](https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence) [Kullback–Leibler divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence) and other metrics. Attached example notebook on `NYC taxi mobility data`
             > to calculate any of these metrics to test the accuracy, you need to group data into two distributions, one for the `original` and one for the `generated` data, then calculate those metrics as distances between distributions.
             > I have attached an example coding for calculating `RMSE`, `MAPE`, `Pearson`, `KL Divergence` and other metrics for the count and Top-N, respectively. That is to say, how much is the difference in count of `taxi` trips between the original data and the sampled data for each neighborhood in New York City (NYC). Attached example notebook titled `stratified_sampling_RMSE_mobility_NYC.ipynb` in the `code` folder.
---------------------------------------
+            > **N.B.** For both query sets, you need to perform spatial join between the point data (i.e., being it sensor air quality reading or taxi mobility in .csv format) and the polygons data (.geosjon file [available online](https://raw.githubusercontent.com/IsamAljawarneh/datasets/master/data/nyc_polygon.geojson)), then you need to perform `groupby` operation on either `neighborhood` or `geohash`, then you compare as per the example attached in `stratified_sampling_RMSE_mobility_NYC.ipynb` in the `code` folder.
+            - Draw x-y graphs, where x is the new `sample size` and y is the `accuracy` for both types of the queries.
+- [ ] You need then to capture the time-based QoS requirements (e.g., `running time` of each algorithm). You normally need to capture `end-to-end` `running time` for all stages of the processing pipeline, from `data cleaning` to `transformation`, to `generation` to `spatial join`, all the way down to `query processing`. Draw x-y graphs, where x is the new `sample size` and y is the `running time`
+    
+-------------------------------------------------
+-------------------------------------------------
+<!-- Task 3 -->
+# [ ] Task 3! 
+  # `TODO:` next
+- apply everything you have done (and you need to do in `task2`) to a second dataset, probably `NYC taxi mobility data`, that is [available online](https://github.com/IsamAljawarneh/datasets/tree/master/data), `nyc1.zip`. the target variable is `trip_distance`. You need to capture `accuracy` and `running time` as described previously.
+
+--------------------------------------------
 <!-- Task 1 -->
-# [ ] Task 1! 
+# [ ] Task 1! `Partially Completed!` --> check the algorithms and the models!
 - [X] Have a look at the Example: GMM for Generating New Data [Gaussian Mixture Models](https://jakevdp.github.io/PythonDataScienceHandbook/05.12-gaussian-mixtures.html). AND
 - [X] Kernel Density Estimation [KDE](https://jakevdp.github.io/PythonDataScienceHandbook/05.13-kernel-density-estimation.html)
 - [X] the data file contains granular (meter-meter level) low-cost air quality data, measuring most importantly Particulate Matters (PM10 and PM2.5), in addition to some other features including location represented as longitudes/latitudes!
