@@ -26,6 +26,10 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
   # `TODO:` next
 - apply everything you have done (and you need to do in `task2`) to a second dataset, probably `NYC taxi mobility data`, that is [available online](https://github.com/IsamAljawarneh/datasets/tree/master/data), `nyc1.zip`. the target variable is `trip_distance`. You need to capture `accuracy` and `running time` as described previously.
 
+- numbers to capture
+    - parameters : generated `data size`  in the x-axis , accuracy [RMSE](https://www.statisticshowto.com/probability-and-statistics/regression-analysis/rmse-root-mean-square-error/) and Mean Absoulte Percentage Error [MAPE](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error) for geo-statistics.  [RMSE equation](https://en.wikipedia.org/wiki/Root-mean-square_deviation). Same applies to `Top-N` queries.
+
+
 --------------------------------------------
 <!-- Task 1 -->
 # [ ] Task 1! `Partially Completed!` --> check the algorithms and the models!
@@ -38,4 +42,15 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
     - Variational Autoencoders (VAEs): VAEs are another type of generative model that learn a low-dimensional representation of the input data and generate new data points by sampling from this learned representation. VAEs consist of an encoder network that maps input data to a latent space and a decoder network that reconstructs the input data from the latent space. By sampling from the latent space, new data points can be generated.
     - Mixture Density Networks (MDNs): MDNs are neural networks that model the conditional probability distribution of the output variable given the input data as a mixture of Gaussian distributions. Similar to GMMs, MDNs can capture complex multi-modal distributions in the data and generate new data points by sampling from the learned mixture distribution.
     - Copula-based Models: Copulas are statistical tools that describe the dependence structure between random variables separately from their marginal distributions. Copula-based models can be used to generate new data by sampling from the copula function while specifying the marginal distributions of the variables.
+# dbscan algorithm
+[dbscan](dbscan-algorithm)
+# [ ] `you need to complete this part' - DBSCAN
+
+        1. [ ] run the example clustering code (DBSCAN), attached in the new folder "DBSCAN_Clustering" inside 'starting_code' folder
+        2. [ ] read more about how DBSCAN works in scikit-learn
+            > [DBSCAN scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html)
+        3. [ ] you need to use ```Silhouette Coefficient ```for evaluation
+            > ***"If the ground truth labels are not known, evaluation can only be performed using the model results itself. In that case, the Silhouette Coefficient comes in handy."***
+            an example is here:
+            [Demo of DBSCAN clustering algorithm](https://scikit-learn.org/stable/auto_examples/cluster/plot_dbscan.html#sphx-glr-auto-examples-cluster-plot-dbscan-py)
 
