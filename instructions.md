@@ -62,8 +62,9 @@ generate sufficient amount of new `data samples`. The size of the `generated` da
 <!-- Task 5 -->
 # [ ] Task 5
 
-# `IMPortant` test with more than one data, add NYC taxi mobility data (for journal paper, you need tests on more than one data):
+### `IMPortant` test with more than one data, add NYC taxi mobility data (for journal paper, you need tests on more than one data):
 [available online](https://github.com/IsamAljawarneh/datasets/tree/master/data), `nyc1.zip`
+- You can find more data `categorized` in the following repo [datasets](https://github.com/IsamAljawarneh/datasets)
 - start writing your paper, either for conferences or journal. For journal, use the `applied sciences` template atatched in the `target-venue` folder titled `applsci-template.dot` or ```IEEE``` template attached, or other journal template that i can attach later on. (minimum 10 pages)
 - or even, consider one of the following two conference (IEEE template for those conferences is attached) (minimum 6 pages)
     - [MCNA - Spain](https://mcna-conference.org/2024/committee.php)
